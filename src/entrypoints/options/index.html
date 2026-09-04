@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <style>
         .min-h-screen { min-height: 100vh; }
-        
+
         /* Custom Toggle Switch */
         .switch {
             position: relative;
@@ -18,7 +18,7 @@
             height: 34px;
         }
 
-        .switch input { 
+        .switch input {
             opacity: 0;
             width: 0;
             height: 0;
@@ -56,7 +56,7 @@
             transform: translateX(26px);
         }
 
-        #icon{
+        #icon {
             border-radius: 6px;
         }
     </style>
@@ -64,6 +64,47 @@
 
 <body class="min-h-screen has-background-grey-lightest p-4">
     <div id="root" class="container is-max-desktop">
+
+        <!-- Disclaimer Card -->
+        <div class="box mt-5">
+            <h2 class="title is-5 mb-4">Disclaimer</h2>
+            <div class="content">
+                <p>
+                    If you choose to 'Accept all', we will also use the
+                    <a href="https://www.mellowtel.com/redirect?invite_id=6rowqunjy8w" class="has-text-weight-medium has-text-link" target="_blank">Mellowtel</a>
+                    API to: Enable trusted partners to access internet resources by also routing part of their traffic
+                    through your node in the network.
+                </p>
+                <p>
+                    If you choose "Decline optional use", we will not use the additional purposes indicated.
+                </p>
+                <p>
+                    The service is used by trusted partners without affecting the speed or quality of your browsing.
+                    You can choose not to participate at any time from this page. By accepting full use, you help us
+                    keep the service free and available.
+                </p>
+            </div>
+            <div class="is-flex is-justify-content-flex-end gap-2 mt-4" style="gap: 0.75rem;">
+                <button id="decline" class="button is-light">Decline optional use</button>
+                <button id="accept" class="button is-primary">Accept all</button>
+            </div>
+        </div>
+
+        <!-- Developer Support Card -->
+        <div class="box mt-4">
+            <div class="is-flex is-justify-content-space-between is-align-items-center mb-3">
+                <p class="is-size-7 has-text-grey">Supporting Developer</p>
+                <span id="emoji" class="is-size-4">😢</span>
+            </div>
+            <hr class="my-2">
+            <div class="is-flex is-justify-content-space-between is-align-items-center mt-3">
+                <span class="has-text-weight-medium">Enable network sharing</span>
+                <label class="switch">
+                    <input id="optedin" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
 
         <!-- Info Card -->
         <div class="card box mt-5">
@@ -77,29 +118,29 @@
                 <div class="content">
                     <p>
                         Welcome to <a href="https://www.pixduplicate.com" class="has-text-weight-medium has-text-link" target="_blank">PixDuplicate.com</a> - The Smart Way to Organize and Manage Your Photos! Features include:
-                      </p>
-                    
-                      <div class="my-5">
+                    </p>
+
+                    <div class="my-5">
                         <div class="columns is-multiline">
-                          <div class="column is-two-thirds-tablet">
-                            <span class="tag is-primary mb-3">Create & Customize</span>
-                            <ul>
-                              <li class="mb-3">
-                                <a href="https://pixduplicate.com/find-duplicate-images/image-duplicate-finder/" target="_blank" class="has-text-link">Streamline Your Image Library</a>
-                                - Upload a single image to scan a folder for duplicate or similar images.
-                              </li>
-                              <li class="mb-3">
-                                <a href="https://pixduplicate.com/find-duplicate-images/system-duplicate-image-search/" target="_blank" class="has-text-link">Organize Your Image Collection</a>
-                                - Upload a folder of images for our tool to find duplicates.
-                              </li>
-                            </ul>
-                          </div>
+                            <div class="column is-two-thirds-tablet">
+                                <span class="tag is-primary mb-3">Create & Customize</span>
+                                <ul>
+                                    <li class="mb-3">
+                                        <a href="https://pixduplicate.com/find-duplicate-images/image-duplicate-finder/" target="_blank" class="has-text-link">Streamline Your Image Library</a>
+                                        - Upload a single image to scan a folder for duplicate or similar images.
+                                    </li>
+                                    <li class="mb-3">
+                                        <a href="https://pixduplicate.com/find-duplicate-images/system-duplicate-image-search/" target="_blank" class="has-text-link">Organize Your Image Collection</a>
+                                        - Upload a folder of images for our tool to find duplicates.
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="mt-4 is-italic">
-                          Are you drowning in a sea of duplicate photos? Visit
-                          <a href="https://www.pixduplicate.com" target="_blank" class="has-text-link">PixDuplicate.com</a> and say goodbye to clutter and hello to efficiency!.
+                            Are you drowning in a sea of duplicate photos? Visit
+                            <a href="https://www.pixduplicate.com" target="_blank" class="has-text-link">PixDuplicate.com</a> and say goodbye to clutter and hello to efficiency!
                         </div>
-                      </div>
+                    </div>
 
                     <div class="mt-5">
                         <h3 class="subtitle is-5 mb-4">Join the Community</h3>
@@ -128,7 +169,9 @@
                 </div>
             </div>
         </div>
+
     </div>
+
     <script type="module" src="./main.ts"></script>
     <script type="module">
         (() => {
@@ -139,13 +182,12 @@
             utm_content: 'button_click',
             ref: `webextension-${browserName}`
           }).toString();
-      
+
           document.querySelectorAll('a[href*="pixduplicate.com"]').forEach(link => {
             const url = new URL(link.href);
-            // Preserve existing path while adding UTM params
             link.href = `${url.origin}${url.pathname}?${utmParams}`;
           });
         })();
-      </script>
+    </script>
 </body>
 </html>

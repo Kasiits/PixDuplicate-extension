@@ -1,9 +1,145 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import icon from "../../assets/Brand-Icon.png";
+  import Mellowtel from "mellowtel";
+  import { MELLOWTEL_CONFIG_KEY } from '@/config/mellowtel';
+
+  const mellowtel = new Mellowtel(MELLOWTEL_CONFIG_KEY, { DISABLE_LOGS: false });
+
+  let optedIn = false;
+  let emoji = "😢";
+  let settingsLink = ""; // Added for compliance
+
+  onMount(async () => {
+    optedIn = await mellowtel.getOptInStatus();
+    emoji = optedIn ? "😀" : "😢";
+
+    // Get the hosted settings link for compliance
+    settingsLink = await mellowtel.generateSettingsLink();
+
+    // Start if already opted in
+    if (optedIn) {
+      await mellowtel.start();
+    }
+
+    const browserName = import.meta.env.BROWSER || "unknown";
+    const utmParams = new URLSearchParams({
+      utm_source: "webextension",
+      utm_medium: "extension",
+      utm_content: "button_click",
+      ref: `webextension-${browserName}`,
+    }).toString();
+
+    const root = document.getElementById("root");
+    root?.querySelectorAll<HTMLAnchorElement>('a[href*="pixduplicate.com"]')
+      .forEach((link) => {
+        if (!link?.href) return;
+        const url = new URL(link.href);
+        const existingParams = new URLSearchParams(url.search);
+        utmParams.split("&").forEach((param) => {
+          const [key, value] = param.split("=");
+          existingParams.set(key, value);
+        });
+        link.href = `${url.origin}${url.pathname}?${existingParams.toString()}`;
+      });
+  });
+
+  async function handleAccept() {
+    await mellowtel.optIn();
+    const started = await mellowtel.start(); // Capture return value
+    if (started) {
+      optedIn = true;
+      emoji = "😀";
+    } else {
+      // Revert UI if start() failed
+      optedIn = false;
+      emoji = "😢";
+      console.error('[Mellowtel] Failed to start - check permissions');
+    }
+  }
+
+  async function handleDecline() {
+    await mellowtel.optOut();
+    optedIn = false;
+    emoji = "😢";
+  }
+
+  async function handleToggle(e: Event) {
+    const target = e.target as HTMLInputElement;
+    if (target.checked) {
+      await handleAccept();
+    } else {
+      await handleDecline();
+    }
+  }
 </script>
 
 <main class="min-h-screen bg-base-200 p-4">
   <div id="root" class="container mx-auto max-w-2xl">
+    <!-- Disclaimer Card -->
+    <div class="card bg-base-100 shadow-md mb-5">
+      <div class="card-body">
+        <h1 class="text-xl font-bold mb-4">Disclaimer</h1>
+        <div class="space-y-4">
+          <p>
+            If you choose to 'Accept all', we will also use the <a
+              href="https://www.mellowtel.com/redirect?invite_id=6rowqunjy8w"
+              class="font-medium text-primary"
+              target="_blank">Mellowtel</a
+            > API to: Enable trusted partners to access internet resources by also
+            routing part of their traffic through your node in the network.
+          </p>
+          <p>
+            If you choose "Decline optional use", we will not use the additional
+            purposes indicated.
+          </p>
+          <p>
+            The service is used by trusted partners without affecting the speed
+            or quality of your browsing. You can choose not to participate at
+            any time from this page. By accepting full use, you help us keep the
+            service free and available.
+          </p>
+        </div>
+        <div class="card-actions justify-end mt-5">
+          <button on:click={handleDecline} class="btn mr-2 mt-4"
+            >Decline optional use</button
+          >
+          <button on:click={handleAccept} class="btn btn-primary mt-4"
+            >Accept all</button
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Developer Support Card -->
+    <div class="card bg-base-100 shadow-md">
+      <div class="card-body">
+        <div class="flex justify-between items-center">
+          <h2 class="text-lg font-semibold">Supporting Developer</h2>
+          <span id="emoji" class="text-2xl">{emoji}</span>
+        </div>
+        <div class="divider"></div>
+        <div class="flex justify-between items-center">
+          <span class="font-medium">Enable network sharing</span>
+          <input
+            id="optedin"
+            type="checkbox"
+            class="toggle toggle-accent"
+            bind:checked={optedIn}
+            on:change={handleToggle}
+          />
+        </div>
+        
+        <!-- Compliance Settings Link -->
+        {#if settingsLink}
+          <div class="text-center mt-4">
+            <a href={settingsLink} target="_blank" class="text-sm link link-hover">
+              Manage Mellowtel Settings
+            </a>
+          </div>
+        {/if}
+      </div>
+    </div>
 
     <!-- Info Card -->
     <div class="card bg-base-100 shadow-md mt-5">

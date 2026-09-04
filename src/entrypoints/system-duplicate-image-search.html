@@ -9,62 +9,20 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 		<script type="module" src="../assets/scripts/slider.js"></script>
 		<script type="module" src="../assets/scripts/jquery.min.js"></script>
-        <script type="module" src="../assets/scripts/logic/page2.js"></script>
+		<script type="module" src="../assets/scripts/logic/page2.js"></script>
 		<style>
            #section-1,#section-2-modal{background-color:#004bfb}#messages,#section-1-head,#section-2{background-color:#fff}#section-1{background-image:url("/bg1.png");background-size:cover;background-position:center;background-repeat:no-repeat}#section-1-head{border-radius:30px;color:#000;box-shadow:0 6px 12px rgba(0,0,0,.2);margin:2rem 1rem 1rem}#section-2{border-radius:2rem 2rem 0 0;margin:0 auto;z-index:1;position:relative}@media screen and (min-width:1024px){#section-1-head{margin:2rem 14rem 1rem}}@media screen and (max-width:1023px){.navbar-menu.is-active{position:absolute;width:100%;left:0;box-shadow:0 8px 16px rgba(10,10,10,.1)}.navbar-dropdown{box-shadow:none;padding-left:1.5rem}}@media print,screen and (min-width:769px){.hero.is-medium .hero-body{padding-top:1rem!important}}#messages{padding:8px;text-align:center;margin:20px auto 16px;max-width:36rem;border-radius:4px}.file-selector-container{border:3px dashed #dbdbdb;border-radius:12px;padding:1.5rem;transition:.3s;background:#023cc6}.option-text{margin-left:16px;font-size:14px;color:#fff}.modal__title{margin:0;font-weight:600;line-height:1.25;color:#000}.modal__container{background-color:#fff;color:#000;max-width:90%;max-height:90vh;overflow-y:auto;box-sizing:border-box}.format-warning{background:#fffef5!important;background-color:#fffef5!important;border:1px solid #ffd757;backdrop-filter:none;border-radius:12px;animation:.3s ease-out slideIn;color:#363636!important}.format-warning .has-text-weight-bold{color:#363636!important}.format-warning .is-size-7{color:#4a4a4a!important}.format-warning .has-text-danger{color:#ff3860!important}.format-warning .has-text-success{color:#23d160!important}.format-warning .has-text-info{color:#3298dc!important}.format-warning .has-text-grey{color:#7a7a7a!important}.format-warning h4.title{color:#00d1b2!important}
-		
-
-        /* ═══ ORIGINAL IMAGE CARD ═══════════════════════════════════════════*/
-        .original-image-card {
-            border: 4px solid #00d1b2 !important;
-            box-shadow: 0 0 20px rgba(0, 209, 178, 0.5) !important;
-            background: linear-gradient(135deg, rgba(0, 209, 178, 0.07) 0%, transparent 100%) !important;
-            position: relative !important;
-            overflow: visible !important;
-        }
-        .original-image-card .cluster-img {
-            border: 2px solid #00d1b2;
-            border-radius: 4px;
-        }
-        /* Outer .cluster row — no border, just needs overflow:visible for badge */
-        .original-image-card-wrapper {
-            overflow: visible !important;
-        }
-        /* cluster-content: shrink to content width so refInfoBox matches card */
-        .cluster-content {
-            display: inline-flex !important;
-            flex-direction: column !important;
-        }
-        /* Bulma notification below dark card — inherits width from cluster-content */
-        .cluster-content > article.notification {
-            width: 100%;
-            box-sizing: border-box;
-            margin: 0 !important;
-            border-radius: 0 0 8px 8px !important;
-        }
-
-        /* ═══ FILE BOX ══════════════════════════════════════════════════════ */
-        .file-box {
-            border: 3px dashed #dbdbdb;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            background: #023cc6;
-            padding: 1rem;
-            width: 100%;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-        @media screen and (min-width: 768px) {
-            .file-box { padding: 2rem; max-width: 600px; }
-        }
-
-        </style>
+        .original-image-card{border:4px solid #00d1b2!important;box-shadow:0 0 20px rgba(0,209,178,.5)!important;background:linear-gradient(135deg,rgba(0,209,178,.07) 0%,transparent 100%)!important;position:relative!important;overflow:visible!important}.original-image-card .cluster-img{border:2px solid #00d1b2;border-radius:4px}.original-image-card-wrapper{overflow:visible!important}.cluster-content{display:inline-flex!important;flex-direction:column!important}.cluster-content>article.notification{width:100%;box-sizing:border-box;margin:0!important;border-radius:0 0 8px 8px!important}
+        .file-box{border:3px dashed #dbdbdb;border-radius:12px;transition:all .3s ease;background:#023cc6;padding:1rem;width:100%;max-width:100%;box-sizing:border-box}@media screen and (min-width:768px){.file-box{padding:2rem;max-width:600px}}
+        /* ═══ MELLOWTEL TOGGLE ══════════════════════════════════════════════ */
+        .mellowtel-switch{position:relative;display:inline-block;width:44px;height:24px;flex-shrink:0}.mellowtel-switch input{opacity:0;width:0;height:0}.mellowtel-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;transition:.3s;border-radius:24px}.mellowtel-slider:before{position:absolute;content:"";height:18px;width:18px;left:3px;bottom:3px;background-color:#fff;transition:.3s;border-radius:50%}input:checked+.mellowtel-slider{background-color:#00d1b2}input:checked+.mellowtel-slider:before{transform:translateX(20px)}details[open] .details-arrow{transform:rotate(90deg)}
+        button.button.is-small.is-hovered{background-color:#1f2229;color:#fff;border:2px solid #4b5263}
+		</style>
 	</head>
 	<body>
 		<main>
 			<section id="section-1" class="hero is-info is-medium">
-				<div id="section-1-head" class="hero-head animate__animated animate__bounceInDown animate__delay-1s">
-				</div>
+				<div id="section-1-head" class="hero-head animate__animated animate__bounceInDown animate__delay-1s"></div>
 				<div class="hero-body">
 					<div class="flex-container-select-files">
 						<div class="flex-center-horizontally">
@@ -77,9 +35,7 @@
 								<section aria-labelledby="folder-selection-heading" class="file-box animate__animated animate__fadeIn animate__delay-3s">
 									<div class="box">
 										<div class="text-centered">
-											<p class="info-text">
-												Your privacy is important to us. The images you select are processed locally in your browser and are not uploaded to any server.
-											</p>
+											<p class="info-text">Your privacy is important to us. The images you select are processed locally in your browser and are not uploaded to any server.</p>
 											<p id="messages" class="hidden" aria-live="polite">Status messages will appear here</p>
 											<div id="file-selector">
 												<input type="file" class="hidden" id="filesSelected" webkitdirectory multiple accept="image/*">
@@ -97,8 +53,7 @@
 								<div class="fast-option animate__animated animate__fadeIn animate__delay-3s">
 									<input type="checkbox" id="fast-option">
 									<label for="fast-option" class="option-text">
-										Use quick search (recommended)
-										<br>
+										Use quick search (recommended)<br>
 										<small>This option speeds up the process but may slightly increase the chance of mismatches, especially in large folders with many JPEG images.</small>
 									</label>
 								</div>
@@ -126,89 +81,109 @@
 							<span class="found-clusters">Similar Image Groups Found:</span>
 							<button class="view-list" aria-expanded="false">Show/Hide Group List</button>
 							<textarea class="textarea" aria-label="List of detected similar image groups"></textarea>
-							<p class="explanation">
-								<small class="small">Scroll to see all detected groups. Please keep this tab open for uninterrupted                                         analysis.</small>
-							</p>
+							<p class="explanation"><small class="small">Scroll to see all detected groups. Please keep this tab open for uninterrupted analysis.</small></p>
 						</div>
 					</div>
 					<div class="notification format-warning fixed-top hidden">
-					<h4 class="title is-4" style="color: #00d1b2;">Managing Duplicates &#8212; Your Safe Options</h4>
-
-					<div id="browser-capability-notice" class="mb-4"></div>
-
-					<p class="has-text-weight-medium mb-3">After finding duplicates, you have three ways to handle them:</p>
-
-					<div class="mb-3" style="border:2px solid #4a4a4a;padding:1rem;border-radius:6px;background:#f5f5f5;">
-						<p class="has-text-weight-bold">&#128203; Copy File Name</p>
-						<p class="is-size-7">Copies the full filename to your clipboard. Nothing is changed on your computer.</p>
-						<p class="is-size-7 has-text-info mt-1"><em>Use this when you want to track files manually without making any changes yet.</em></p>
+						<h4 class="title is-4" style="color:#00d1b2;">Managing Duplicates &#8212; Your Safe Options</h4>
+						<div id="browser-capability-notice" class="mb-4"></div>
+						<p class="has-text-weight-medium mb-3">After finding duplicates, you have three ways to handle them:</p>
+						<div class="mb-3" style="border:2px solid #4a4a4a;padding:1rem;border-radius:6px;background:#f5f5f5;">
+							<p class="has-text-weight-bold">&#128203; Copy File Name</p>
+							<p class="is-size-7">Copies the full filename to your clipboard. Nothing is changed on your computer.</p>
+							<p class="is-size-7 has-text-info mt-1"><em>Use this when you want to track files manually without making any changes yet.</em></p>
+						</div>
+						<div class="mb-3" style="border:2px solid #0099cc;padding:1rem;border-radius:6px;background:#e8f4fb;">
+							<p class="has-text-weight-bold">&#128193; Move to Duplicates Folder</p>
+							<p class="is-size-7">Creates a folder called <code>PixDuplicate-Duplicates</code> and moves the duplicate there. The file is NOT deleted &#8212; just relocated.</p>
+							<p class="is-size-7 has-text-success mt-1">&#10003; SAFE: Files are moved, not deleted. You can review and restore them later.</p>
+							<p class="is-size-7 mt-1"><strong>Location:</strong> YourSelectedFolder/PixDuplicate-Duplicates/</p>
+							<p class="is-size-7 has-text-grey mt-1">Requires Chrome 86+, Edge 86+, or Safari 15.2+</p>
+						</div>
+						<div class="mb-3" style="border:2px solid #ff3860;padding:1rem;border-radius:6px;background:#fff0f3;">
+							<p class="has-text-weight-bold has-text-danger">&#128465; Delete Permanently</p>
+							<p class="is-size-7">Removes the file completely. This action cannot be undone.</p>
+							<p class="is-size-7 has-text-danger mt-2"><strong>&#9888; WARNING: File will be gone forever &#8212; does NOT go to Recycle Bin or Trash.</strong></p>
+							<p class="is-size-7 mt-2">We strongly recommend using Move first so you can review before deleting.</p>
+							<p class="is-size-7 has-text-grey mt-1">Requires Chrome 86+, Edge 86+, or Safari 15.2+</p>
+						</div>
+						<div class="notification is-info is-light" style="padding:0.75rem;">
+							<p class="has-text-weight-bold is-size-7">&#128274; Privacy &amp; Security</p>
+							<p class="is-size-7">All processing happens locally in your browser. No files are ever uploaded.</p>
+						</div>
 					</div>
 
-					<div class="mb-3" style="border:2px solid #0099cc;padding:1rem;border-radius:6px;background:#e8f4fb;">
-						<p class="has-text-weight-bold">&#128193; Move to Duplicates Folder</p>
-						<p class="is-size-7">Creates a folder called <code>PixDuplicate-Duplicates</code> and moves the duplicate there. The file is NOT deleted &#8212; just relocated.</p>
-						<p class="is-size-7 has-text-success mt-1">&#10003; SAFE: Files are moved, not deleted. You can review and restore them later.</p>
-						<p class="is-size-7 mt-1"><strong>Location:</strong> YourSelectedFolder/PixDuplicate-Duplicates/</p>
-						<p class="is-size-7 has-text-grey mt-1">Requires Chrome 86+, Edge 86+, or Safari 15.2+</p>
-					</div>
-
-					<div class="mb-3" style="border:2px solid #ff3860;padding:1rem;border-radius:6px;background:#fff0f3;">
-						<p class="has-text-weight-bold has-text-danger">&#128465; Delete Permanently</p>
-						<p class="is-size-7">Removes the file completely. This action cannot be undone.</p>
-						<p class="is-size-7 has-text-danger mt-2"><strong>&#9888; WARNING: File will be gone forever &#8212; does NOT go to Recycle Bin or Trash.</strong></p>
-						<p class="is-size-7 mt-2">We strongly recommend using Move first so you can review before deleting.</p>
-						<p class="is-size-7 has-text-grey mt-1">Requires Chrome 86+, Edge 86+, or Safari 15.2+</p>
-					</div>
-
-					<div class="notification is-info is-light" style="padding:0.75rem;">
-						<p class="has-text-weight-bold is-size-7">&#128274; Privacy &amp; Security</p>
-						<p class="is-size-7">All processing happens locally in your browser. No files are ever uploaded.</p>
-					</div>
-				</div>
 					<!-- ═══ PIXDUPLICATE.COM PROMO BANNER ═══ -->
-				<div style="
-					margin: 1.5rem 0 0;
-					background: #f0fdf9;
-					border: 2px solid #00d1b2;
-					border-radius: 8px;
-					padding: 1rem 1.2rem;
-				">
-					<div style="display:flex;align-items:center;gap:8px;margin-bottom:0.6rem;">
-						<span style="font-size:1rem;">🌐</span>
-						<p style="margin:0;font-size:0.82rem;font-weight:700;color:#00a896;letter-spacing:0.04em;">MORE FEATURES AT PIXDUPLICATE.COM</p>
+					<div style="margin:1.5rem 0 0;background:#f0fdf9;border:2px solid #00d1b2;border-radius:8px;padding:1rem 1.2rem;">
+						<div style="display:flex;align-items:center;gap:8px;margin-bottom:0.6rem;">
+							<span style="font-size:1rem;">🌐</span>
+							<p style="margin:0;font-size:0.82rem;font-weight:700;color:#00a896;letter-spacing:0.04em;">MORE FEATURES AT PIXDUPLICATE.COM</p>
+						</div>
+						<div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.8rem;">
+							<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">🔄 Side-by-side comparison</span>
+							<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">📋 Download activity log</span>
+							<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">📥 Download duplicates list</span>
+							<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">📱 Works on phones &amp; tablets</span>
+							<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">🌍 Multiple languages</span>
+							<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">⚡ Install &amp; use offline</span>
+						</div>
+						<a href="https://www.pixduplicate.com/?utm_source=webextension&utm_medium=extension&utm_content=page_two&ref=webextension-mozilla" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;background:#00d1b2;color:#fff;font-weight:700;font-size:0.78rem;padding:6px 16px;border-radius:6px;text-decoration:none;letter-spacing:0.03em;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+							Open PixDuplicate.com ↗
+						</a>
 					</div>
-					<div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.8rem;">
-						<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">🔄 Side-by-side comparison</span>
-						<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">📋 Download activity log</span>
-						<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">📥 Download duplicates list</span>
-						<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">📱 Works on phones &amp; tablets</span>
-						<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">🌍 Multiple languages</span>
-						<span style="background:#e0faf5;border:1px solid #00d1b2;color:#00796b;border-radius:20px;padding:2px 10px;font-size:0.72rem;">⚡ Install &amp; use offline</span>
+					<!-- ═══════════════════════════════════════ -->
+
+					<!-- ═══ MELLOWTEL SUPPORT BANNER ═══ -->
+					<div style="margin:1rem 0 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:0.85rem 1rem;">
+						<!-- Top row: icon + title + emoji mood -->
+						<div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;">
+							<div style="display:flex;align-items:center;gap:0.5rem;">
+								<span style="font-size:0.9rem;">🤝</span>
+								<span style="font-size:0.78rem;font-weight:700;color:#363636;">Support the Developer using <a href="https://www.mellowtel.com/redirect?invite_id=6rowqunjy8w" target="_blank" rel="noopener noreferrer" style="color:#1022ff;font-weight:700;text-decoration:none;">Mellowtel</a></span>
+							</div>
+							<span id="emoji" style="font-size:1.1rem;">😢</span>
+						</div>
+						<!-- Details / Disclaimer -->
+						<details style="margin-top:0.55rem;">
+							<summary style="font-size:0.72rem;color:#00a896;font-weight:600;cursor:pointer;list-style:none;display:flex;align-items:center;gap:4px;">
+								<span class="details-arrow" style="display:inline-block;transition:transform 0.2s;">▶</span> What is this?
+							</summary>
+							<div style="margin-top:0.5rem;padding:0.6rem 0.75rem;background:#f0fdf9;border:1px solid #c8f0e8;border-radius:6px;font-size:0.71rem;color:#4a4a4a;line-height:1.5;">
+								<p style="margin:0 0 0.4rem 0;"><strong>Disclaimer</strong></p>
+								<p style="margin:0 0 0.4rem 0;">If you choose to 'Accept all', we will also use the <a href="https://www.mellowtel.com/redirect?invite_id=6rowqunjy8w" target="_blank" rel="noopener noreferrer" style="color:#1022ff;font-weight:600;">Mellowtel</a> API to enable trusted partners to access internet resources by routing part of their traffic through your node in the network.</p>
+								<p style="margin:0 0 0.4rem 0;">If you choose "Decline", we will not use the additional purposes indicated.</p>
+								<p style="margin:0;">The service is used by trusted partners without affecting your browsing speed or quality. You can opt out at any time.</p>
+							</div>
+						</details>
+						<!-- Divider -->
+						<hr style="margin:0.55rem 0;border:none;border-top:1px solid #ebebeb;">
+						<!-- Bottom row: toggle + buttons -->
+						<div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;flex-wrap:wrap;">
+							<div style="display:flex;align-items:center;gap:0.5rem;">
+								<label class="mellowtel-switch">
+									<input id="optedin" type="checkbox">
+									<span class="mellowtel-slider"></span>
+								</label>
+								<span style="font-size:0.75rem;color:#4a4a4a;font-weight:500;">Network sharing</span>
+							</div>
+							<div style="display:flex;gap:0.4rem;">
+								<button id="decline" class="button is-small is-light" style="font-size:0.72rem;height:auto;padding:4px 10px;">Decline</button>
+								<button id="accept" class="button is-small is-primary" style="font-size:0.72rem;height:auto;padding:4px 10px;">Accept all</button>
+							</div>
+						</div>
 					</div>
-					<a href="https://www.pixduplicate.com/?utm_source=webextension&utm_medium=extension&utm_content=page_two&ref=webextension-mozilla" target="_blank" rel="noopener noreferrer" style="
-						display:inline-flex;align-items:center;gap:6px;
-						background:#00d1b2;color:#fff;font-weight:700;font-size:0.78rem;
-						padding:6px 16px;border-radius:6px;text-decoration:none;
-						letter-spacing:0.03em;transition:opacity 0.2s;
-					" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-						Open PixDuplicate.com ↗
-					</a>
-				</div>
-				<!-- ═══════════════════════════════════════ -->
+					<!-- ═══════════════════════════════ -->
+
 					<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
 						<div class="modal__overlay" tabindex="-1" data-micromodal-close="">
 							<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
 								<header class="modal__header">
-									<h2 class="modal__title" id="modal-1-title">
-										Image Preview
-									</h2>
+									<h2 class="modal__title" id="modal-1-title">Image Preview</h2>
 									<button class="modal__close" aria-label="Close modal" data-micromodal-close="">×</button>
 								</header>
 								<main class="modal__content" id="modal-1-content">
-									<img loading="lazy" id="modal-1-image" src="" alt="Full size image" style="max-width: 100%; height: auto;">
-									<div class="slider">
-										<input type="text" id="sampleSlider">
-									</div>
+									<img loading="lazy" id="modal-1-image" src="" alt="Full size image" style="max-width:100%;height:auto;">
+									<div class="slider"><input type="text" id="sampleSlider"></div>
 								</main>
 							</div>
 						</div>
@@ -217,10 +192,10 @@
 				</section>
 			</div>
 		</main>
+		<script type="module" src="../entrypoints/options/main.ts"></script>
 	</body>
-
 	<style>
-       #messages,.cluster-img-div,.cluster-num,.info-text,.modal__content,.text-centered{text-align:center}:root{--primary-color:#03a9f4;--background-color:#121212;--text-color:#e0e0e0;--secondary-background:#333;--border-color:#444;--danger-color:#ff5252;--success-color:#039209;--failure-color:red;--light-text-color:#aaa;--modal-bg:#fff;--modal-text-color:#000;--modal-title-color:#000;--modal-overlay-bg:rgba(0, 0, 0, 0.8);--modal-padding:30px;--modal-animation-duration:.3s;--modal-border-radius:4px;--modal-title-font-size:1.25rem;--modal-close-font-size:1.5rem;--scrollbar-width:12px;--scrollbar-track-bg:#2b2b2b;--scrollbar-thumb-bg:#555;--scrollbar-thumb-hover-bg:#888;--scrollbar-thumb-border:3px solid #2b2b2b;--scrollbar-radius:10px}html{background-color:var(--background-color);color:var(--text-color);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}body{margin:0;padding:0}h1,h2{color:var(--primary-color);font-weight:700;letter-spacing:.1em;margin:20px 0 6px}h1{font-size:36px;color:#fff}h2{font-size:26px}.one-similar{display:flex;flex-direction:row;flex-wrap:wrap;margin-top:66px;margin-left:3rem;margin-right:1rem;gap:7px}.one-similar>*{min-width:150px;max-width:100%}.card-link{display:block;color:inherit;text-decoration:none}.card{transition:box-shadow .3s,transform .3s}.card-link:hover .card{box-shadow:0 10px 20px rgba(0,0,0,.1);transform:translateY(-5px);transform:translateY(-5px) scale(1.02)}a.button.is-ghost:hover{transform:none;box-shadow:none}.button{transition:.3s}.button:hover{transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,.2)}.button:active{transform:scale(.98)}.button.is-danger{float:right;color:#fff;background-color:var(--danger-color)}.button-passive,.button-passive:hover{color:#7b7b7b;background-color:#3a4046}button.button.is-small.is-hovered{background-color:#1f2229;color:#fff;border:2px solid #4b5263}.button-small{font-size:11px;letter-spacing:.2em;padding:5px 10px;border-radius:4px;margin:2px -6px 0 0}.button-passive{cursor:default}.modal__close,.view-list,img.cluster-img,input{cursor:pointer}#messages,.fixed-top{background-color:var(--secondary-background)}main{display:block;width:100%;height:100%}.flex-container-select-files{display:flex;justify-content:center;align-items:center;margin:0 auto;height:100vh}.flex-center-horizontally{display:flex;flex-direction:column;align-items:center}.exposure-option,.fast-option{display:flex;flex-direction:row;margin-top:16px;font-size:14px;max-width:380px}.exposure-option{margin-top:14px}#messages{padding:8px;margin:20px auto 16px;max-width:420px;border-radius:4px}.fixed-top{top:0;margin-top:3rem;margin-left:3rem;margin-right:3rem;padding:16px;box-shadow:0 .5em 1em -.125em rgba(0,0,0,.5);border-radius:8px}.fixed-white-1{display:flex;flex-direction:row;flex-wrap:nowrap;padding:16px 0 0 15px;width:100%}.fixed-white-2{padding:0 20px 5px 15px}.progress{width:175px;height:8px;margin:6px 14px 0 0;overflow:hidden;background-color:#444;border-radius:4px;box-shadow:inset 0 1px 2px rgba(0,0,0,.1)}#progress-bar{background-color:var(--primary-color);width:40%;height:100%;border-radius:4px}.progress-text{height:34px;color:#fff;margin-bottom:2rem}.found-clusters{color:#fff}.view-list{color:var(--primary-color)}.textarea,textarea{width:100%;background-color:#2a2a2a;color:var(--text-color);border:1px solid var(--border-color);border-radius:4px;font-size:14px}textarea{height:60px;resize:vertical;transition:background-color .3s}textarea:focus{background-color:#3a3a3a;outline:0}.textarea{display:none;margin:14px 0;font-size:.8em}.micromodal-slide.is-open,.micromodal-slide[aria-hidden=false],.textareaon{display:block}.textareaon{height:160px}.explanation{margin:2px 0 0}.small{color:var(--light-text-color);font-size:85%}.clusters,.found-images{margin:0 20px 40px;padding-top:102px}.found-images{display:flex;flex-direction:column;margin-top:66px;margin-left:16px}.cluster{display:flex;flex-direction:row;margin-bottom:22px}.cluster-num{font-family:Roboto,serif;font-size:1.6em;color:#000;padding:0 8px}.cluster-imgs{display:flex;flex-wrap:wrap;margin-bottom:5px}.cluster-img-div{margin:18px 16px 3px 0;padding:8px;border-radius:8px;background-color:#292929}.toastify-container .toastify-custom,.toastify-container .toastify-custom>.toastify-toast{border-radius:6px!important;box-shadow:0 4px 8px rgba(0,0,0,.3)!important}img{vertical-align:middle;border-radius:4px}.image-size,.img-path{color:#bbb}.img-path{white-space:nowrap;line-height:1.42857143}.image-size{background-color:#292929;letter-spacing:.1em;font-size:13px;padding:3px;border-bottom-left-radius:.25rem;border-bottom-right-radius:.25rem}.success{color:var(--success-color)}.failure{color:var(--failure-color)}.box{background-color:#fff}.file-selector-container{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;border:3px dashed #dbdbdb;border-radius:8px;background-color:#023cc6;transition:.3s;color:#fff}.file-selector-button{display:flex;align-items:center;justify-content:center;padding:.75rem 1.5rem;background-color:#4a90e2;color:#fff;border-radius:4px;cursor:pointer;transition:background-color .3s}.file-selector-button:hover{background-color:#357ab8}.file-selector-button .icon{margin-right:.5rem}.file-selector-info{margin-top:1rem;color:#b3b3b3;font-size:.9rem}.file-selector-container.highlight{border-color:#67aefc;background-color:#2a3a4a}.hidden,.micromodal-slide{display:none}.info-text{margin-bottom:1rem;color:#000;font-size:.9rem;max-width:600px}.text-centered{display:flex;flex-direction:column;align-items:center}.footer .fab.fa-facebook{color:#1877f2}.footer .fab.fa-twitter{color:#1da1f2}.footer .fab.fa-whatsapp{color:#25d366}.footer .fab.fa-telegram{color:#08c}.footer .fab.fa-reddit{color:#ff4500}.footer .fab.fa-linkedin{color:#0077b5}.footer .fab.fa-hacker-news{color:#f60}.footer img{transition:transform .3s ease-in-out}.footer a:hover img{transform:translateY(-4px);transition:transform .2s ease-out}.modal__overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--modal-overlay-bg);display:flex;justify-content:center;align-items:center}.modal__container{background-color:var(--modal-bg);color:var(--modal-text-color);padding:var(--modal-padding);max-width:90%;max-height:90vh;border-radius:var(--modal-border-radius);overflow-y:auto;box-sizing:border-box}.modal__header{position:relative}.modal__title{margin:0;font-weight:600;font-size:var(--modal-title-font-size);line-height:1.25;color:var(--modal-title-color)}.modal__close{background:0 0;border:0;color:#000;font-size:var(--modal-close-font-size);position:absolute;top:-4px;right:10px}.modal__content{margin-top:2rem;margin-bottom:2rem;line-height:1.5;color:rgba(240,240,240,.9)}.slider{width:98%;max-width:100%;margin-top:3rem}.micromodal-slide[aria-hidden=false] .modal__overlay{animation:mmfadeIn var(--modal-animation-duration) cubic-bezier(0,0,.2,1)}.micromodal-slide[aria-hidden=false] .modal__container{animation:mmslideIn var(--modal-animation-duration) cubic-bezier(0,0,.2,1)}.micromodal-slide[aria-hidden=true] .modal__overlay{animation:mmfadeOut var(--modal-animation-duration) cubic-bezier(0,0,.2,1)}.micromodal-slide[aria-hidden=true] .modal__container{animation:mmslideOut var(--modal-animation-duration) cubic-bezier(0,0,.2,1)}@keyframes mmfadeIn{from{opacity:0}to{opacity:1}}@keyframes mmfadeOut{from{opacity:1}to{opacity:0}}@keyframes mmslideIn{from{transform:translateY(15%)}to{transform:translateY(0)}}@keyframes mmslideOut{from{transform:translateY(0)}to{transform:translateY(-10%)}}@media (max-width:600px){.modal__container{padding:20px;max-width:95%}.modal__title{font-size:1.1rem}.modal__close{font-size:1.2rem}}
-	  .rs-container *{box-sizing:border-box;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.rs-container{font-family:Arial,Helvetica,sans-serif;height:45px;position:relative}.rs-container .rs-bg,.rs-container .rs-selected{background-color:#eee;border:1px solid #ededed;height:10px;left:0;position:absolute;top:5px;width:100%;border-radius:3px}.rs-container .rs-selected{background-color:#00b3bc;border:1px solid #00969b;transition:all .2s linear;width:0}.rs-container.disabled .rs-selected{background-color:#ccc;border-color:#bbb}.rs-container .rs-pointer{background-color:#fff;border:1px solid #bbb;border-radius:4px;cursor:pointer;height:20px;left:-10px;position:absolute;top:0;transition:all .2s linear;width:30px;box-shadow:inset 0 0 1px #FFF,inset 0 1px 6px #ebebeb,1px 1px 4px rgba(0,0,0,.1)}.rs-container.disabled .rs-pointer{border-color:#ccc;cursor:default}.rs-container .rs-pointer::after,.rs-container .rs-pointer::before{content:'';position:absolute;width:1px;height:9px;background-color:#ddd;left:12px;top:5px}.rs-container .rs-pointer::after{left:auto;right:12px}.rs-container.sliding .rs-pointer,.rs-container.sliding .rs-selected{transition:none}.rs-container .rs-scale{left:0;position:absolute;top:5px;white-space:nowrap}.rs-container .rs-scale span{float:left;position:relative}.rs-container .rs-scale span::before{background-color:#ededed;content:"";height:8px;left:0;position:absolute;top:10px;width:1px}.rs-container.rs-noscale span::before{display:none}.rs-container.rs-noscale span:first-child::before,.rs-container.rs-noscale span:last-child::before{display:block}.rs-container .rs-scale span:last-child{margin-left:-1px;width:0}.rs-container .rs-scale span ins{color:#333;display:inline-block;font-size:12px;margin-top:20px;text-decoration:none}.rs-container.disabled .rs-scale span ins{color:#999}.rs-tooltip{color:#333;width:auto;min-width:60px;height:30px;background:#fff;border:1px solid #00969b;border-radius:3px;position:absolute;transform:translate(-50%,-35px);left:13px;text-align:center;font-size:13px;padding:6px 10px 0}.rs-container.disabled .rs-tooltip{border-color:#ccc;color:#999}
+		#messages,.cluster-img-div,.cluster-num,.info-text,.modal__content,.text-centered{text-align:center}:root{--primary-color:#03a9f4;--background-color:#121212;--text-color:#e0e0e0;--secondary-background:#333;--border-color:#444;--danger-color:#ff5252;--success-color:#039209;--failure-color:red;--light-text-color:#aaa;--modal-bg:#fff;--modal-text-color:#000;--modal-title-color:#000;--modal-overlay-bg:rgba(0, 0, 0, 0.8);--modal-padding:30px;--modal-animation-duration:.3s;--modal-border-radius:4px;--modal-title-font-size:1.25rem;--modal-close-font-size:1.5rem}html{background-color:var(--background-color);color:var(--text-color);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}body{margin:0;padding:0}h1,h2{color:var(--primary-color);font-weight:700;letter-spacing:.1em;margin:20px 0 6px}h1{font-size:36px;color:#fff}h2{font-size:26px}.one-similar{display:flex;flex-direction:row;flex-wrap:wrap;margin-top:66px;margin-left:3rem;margin-right:1rem;gap:7px}.card-link{display:block;color:inherit;text-decoration:none}.card{transition:box-shadow .3s,transform .3s}.card-link:hover .card{box-shadow:0 10px 20px rgba(0,0,0,.1);transform:translateY(-5px) scale(1.02)}a.button.is-ghost:hover{transform:none;box-shadow:none}.button{transition:.3s}.button:hover{transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,.2)}.button:active{transform:scale(.98)}.button.is-danger{float:right;color:#fff;background-color:var(--danger-color)}.button-passive,.button-passive:hover{color:#7b7b7b;background-color:#3a4046}.button-passive{cursor:default}.modal__close,.view-list,img.cluster-img,input{cursor:pointer}#messages,.fixed-top{background-color:var(--secondary-background)}main{display:block;width:100%;height:100%}.flex-container-select-files{display:flex;justify-content:center;align-items:center;margin:0 auto;height:100vh}.flex-center-horizontally{display:flex;flex-direction:column;align-items:center}.fast-option{display:flex;flex-direction:row;margin-top:16px;font-size:14px;max-width:380px}#messages{padding:8px;margin:20px auto 16px;max-width:420px;border-radius:4px}.fixed-top{top:0;margin-top:3rem;margin-left:3rem;margin-right:3rem;padding:16px;box-shadow:0 .5em 1em -.125em rgba(0,0,0,.5);border-radius:8px}.fixed-white-1{display:flex;flex-direction:row;flex-wrap:nowrap;padding:16px 0 0 15px;width:100%}.fixed-white-2{padding:0 20px 5px 15px}.progress{width:175px;height:8px;margin:6px 14px 0 0;overflow:hidden;background-color:#444;border-radius:4px}#progress-bar{background-color:var(--primary-color);width:40%;height:100%;border-radius:4px}.progress-text{height:34px;color:#fff;margin-bottom:2rem}.found-clusters{color:#fff}.view-list{color:var(--primary-color)}.textarea,textarea{width:100%;background-color:#2a2a2a;color:var(--text-color);border:1px solid var(--border-color);border-radius:4px;font-size:14px}textarea{height:60px;resize:vertical}.textarea{display:none;margin:14px 0;font-size:.8em}.micromodal-slide.is-open,.micromodal-slide[aria-hidden=false],.textareaon{display:block}.textareaon{height:160px}.explanation{margin:2px 0 0}.small{color:var(--light-text-color);font-size:85%}.clusters,.found-images{margin:0 20px 40px;padding-top:102px}.found-images{display:flex;flex-direction:column;margin-top:66px;margin-left:16px}.cluster{display:flex;flex-direction:row;margin-bottom:22px}.cluster-num{font-family:Roboto,serif;font-size:1.6em;color:#000;padding:0 8px}.cluster-imgs{display:flex;flex-wrap:wrap;margin-bottom:5px}.cluster-img-div{margin:18px 16px 3px 0;padding:8px;border-radius:8px;background-color:#292929}img{vertical-align:middle;border-radius:4px}.image-size,.img-path{color:#bbb}.img-path{white-space:nowrap;line-height:1.42857143}.image-size{background-color:#292929;letter-spacing:.1em;font-size:13px;padding:3px;border-bottom-left-radius:.25rem;border-bottom-right-radius:.25rem}.success{color:var(--success-color)}.failure{color:var(--failure-color)}.box{background-color:#fff}.hidden,.micromodal-slide{display:none}.info-text{margin-bottom:1rem;color:#000;font-size:.9rem;max-width:600px}.text-centered{display:flex;flex-direction:column;align-items:center}.modal__overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--modal-overlay-bg);display:flex;justify-content:center;align-items:center}.modal__container{background-color:var(--modal-bg);color:var(--modal-text-color);padding:var(--modal-padding);max-width:90%;max-height:90vh;border-radius:var(--modal-border-radius);overflow-y:auto;box-sizing:border-box}.modal__header{position:relative}.modal__title{margin:0;font-weight:600;font-size:var(--modal-title-font-size);line-height:1.25;color:var(--modal-title-color)}.modal__close{background:0 0;border:0;color:#000;font-size:var(--modal-close-font-size);position:absolute;top:-4px;right:10px}.modal__content{margin-top:2rem;margin-bottom:2rem;line-height:1.5}.slider{width:98%;max-width:100%;margin-top:3rem}.micromodal-slide[aria-hidden=false] .modal__overlay{animation:mmfadeIn var(--modal-animation-duration) cubic-bezier(0,0,.2,1)}.micromodal-slide[aria-hidden=false] .modal__container{animation:mmslideIn var(--modal-animation-duration) cubic-bezier(0,0,.2,1)}.micromodal-slide[aria-hidden=true] .modal__overlay{animation:mmfadeOut var(--modal-animation-duration) cubic-bezier(0,0,.2,1)}.micromodal-slide[aria-hidden=true] .modal__container{animation:mmslideOut var(--modal-animation-duration) cubic-bezier(0,0,.2,1)}@keyframes mmfadeIn{from{opacity:0}to{opacity:1}}@keyframes mmfadeOut{from{opacity:1}to{opacity:0}}@keyframes mmslideIn{from{transform:translateY(15%)}to{transform:translateY(0)}}@keyframes mmslideOut{from{transform:translateY(0)}to{transform:translateY(-10%)}}
+		.rs-container *{box-sizing:border-box;user-select:none}.rs-container{font-family:Arial,Helvetica,sans-serif;height:45px;position:relative}.rs-container .rs-bg,.rs-container .rs-selected{background-color:#eee;border:1px solid #ededed;height:10px;left:0;position:absolute;top:5px;width:100%;border-radius:3px}.rs-container .rs-selected{background-color:#00b3bc;border:1px solid #00969b;transition:all .2s linear;width:0}.rs-container .rs-pointer{background-color:#fff;border:1px solid #bbb;border-radius:4px;cursor:pointer;height:20px;left:-10px;position:absolute;top:0;transition:all .2s linear;width:30px}.rs-container .rs-scale{left:0;position:absolute;top:5px;white-space:nowrap}.rs-container .rs-scale span{float:left;position:relative}.rs-container .rs-scale span ins{color:#333;display:inline-block;font-size:12px;margin-top:20px;text-decoration:none}.rs-tooltip{color:#333;width:auto;min-width:60px;height:30px;background:#fff;border:1px solid #00969b;border-radius:3px;position:absolute;transform:translate(-50%,-35px);left:13px;text-align:center;font-size:13px;padding:6px 10px 0}
 	</style>
 </html>
